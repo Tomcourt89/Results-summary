@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/script.js"></script>
   
   <title>Frontend Mentor | Results summary component</title>
 
@@ -16,32 +18,46 @@
 </head>
 <body>
 
-  Your Result
-  76
-  of 100
+  <article>
+    <section class="result">
+      <h2>Your Result</h2>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+      <p class="percent"><span>76</span> of 100</p>
 
-  Reaction
-  80 / 100
+      <div>
+        <h3>Great</h3>
 
-  Memory
-  92 / 100
+        <p>Your performance exceeds 65% of the people conducting the test here!</p>
+      </div>
+    </section>
 
-  Verbal
-  61 / 100
+    <section class="summary">
+      <ul>
+        <li>
+          <h4>Reaction</h4>
+          <p><span>80</span> / 100</p>
+        </li>
+        <li>
+          <h4>Memory</h4>
+          <p><span>92</span> / 100</p>
+        </li>
+        <li>
+          <h4>Verbal</h4>
+          <p><span>61</span> / 100</p>
+        </li>
+        <li>
+          <h4>Visual</h4>
+          <p><span>73</span> / 100</p>
+        </li>
+      </ul>
 
-  Visual
-  72 / 100
+      <button>Continue</button>
+    </section>
+  </article>
 
-  Continue
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Tomcourt89/">Tom Court</a>.
   </div>
 </body>
 </html>
