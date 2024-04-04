@@ -1,0 +1,198 @@
+:root {
+
+    --light-red: 0, 100%, 67%;
+    --orange-yellow: 39, 100%, 56%;
+    --green-teal: 166, 100%, 37%;
+    --cobalt-blue: 234, 85%, 45%;
+
+    --slate-blue: 252, 100%, 67%;
+    --royal-blue: 241, 81%, 54%;
+
+    --violet-blue: 256, 72%, 46%, 1;
+    --persian-blue: 241, 72%, 46%, 0;
+
+    --white: 0, 0%, 100%;
+    --pale-blue: 221, 100%, 96%;
+    --light-lavender: 241, 100%, 89%;
+    --dark-gray-blue: 224, 30%, 27%;
+
+    --text-sm: 1rem;
+    --text-base: 1.125rem;
+    --text-lg: 1.5rem;
+    --text-xl: 3.5rem;
+}
+
+@font-face {
+    font-family: "Hanken";
+    src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    font-family: "Hanken";
+    background: hsl(var(--pale-blue));
+}
+
+article {
+    background: hsl(var(--white));
+}
+
+h2 {
+    font-size: var(--text-base);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+}
+
+.result {
+    background: linear-gradient(hsla(var(--slate-blue)), hsla(var(--royal-blue)));
+    border-radius: 0 0 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 58px 40px;
+    gap: 24px;
+    color: hsl(var(--light-lavender));
+
+    .percent {
+        display: flex;
+        flex-direction: column;
+        height: 140px;
+        width: 140px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: linear-gradient(hsla(var(--violet-blue)), hsla(var(--persian-blue)));
+        background-blend-mode: color;
+
+        span {
+            color: hsl(var(--white));
+            font-size: var(--text-xl);
+            font-weight: 700;
+            line-height: 72px;
+        }
+    }
+
+    > div {
+        text-align: center;
+
+        h3 {
+            color: hsl(var(--white));
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.summary {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-block: 24px;
+
+        li {
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+
+            h4 {
+                font-size: var(--text-sm);
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+            }
+
+            p {
+                color: hsla(var(--dark-gray-blue), 0.5);
+
+                span {
+                    color: hsla(var(--dark-gray-blue), 1);
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .reaction {
+            background: hsla(var(--light-red), 0.1);
+
+            h4 {
+                color: hsl(var(--light-red));
+
+                &::before {
+                    content: url(../assets/images/icon-reaction.svg);
+                    transform: translateY(2px);
+                    margin-right: 12px;
+                }
+            }
+        }
+    
+        .memory {
+            background: hsla(var(--orange-yellow), 0.1);
+
+            h4 {
+                color: hsl(var(--orange-yellow));
+
+                &::before {
+                    content: url(../assets/images/icon-memory.svg);
+                    transform: translateY(2px);
+                    margin-right: 12px;
+                }
+            }
+        }
+    
+        .verbal {
+            background: hsla(var(--green-teal), 0.1);
+
+            h4 {
+                color: hsl(var(--green-teal));
+
+                &::before {
+                    content: url(../assets/images/icon-verbal.svg);
+                    transform: translateY(2px);
+                    margin-right: 12px;
+                }
+            }
+        }
+    
+        .visual {
+            background: hsla(var(--cobalt-blue), 0.1);
+
+            h4 {
+                color: hsl(var(--cobalt-blue));
+
+                &::before {
+                    content: url(../assets/images/icon-visual.svg);
+                    transform: translateY(2px);
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+
+    button {
+        background: hsl(var(--dark-gray-blue));
+        color: hsl(var(--white));
+        outline: none;
+        border: none;
+        border-radius: 128px;
+        padding-block: 17px;
+        font-size: var(--text-base);
+        font-weight: 700;
+    }
+}
