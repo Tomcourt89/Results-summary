@@ -1,5 +1,4 @@
 :root {
-
     --light-red: 0, 100%, 67%;
     --orange-yellow: 39, 100%, 56%;
     --green-teal: 166, 100%, 37%;
@@ -74,7 +73,7 @@ h3 {
         align-items: center;
         border-radius: 50%;
         background: linear-gradient(hsla(var(--violet-blue)), hsla(var(--persian-blue)));
-        background-blend-mode: color;
+        color: hsla(var(--light-lavender), 0.5);
 
         span {
             color: hsl(var(--white));
@@ -90,6 +89,10 @@ h3 {
         h3 {
             color: hsl(var(--white));
             margin-bottom: 8px;
+        }
+
+        p {
+            font-size: var(--text-sm);
         }
     }
 }
@@ -194,5 +197,80 @@ h3 {
         padding-block: 17px;
         font-size: var(--text-base);
         font-weight: 700;
+    }
+}
+
+@media (width > 64em) {
+    :root {
+        --text-sm: 1.125rem;
+        --text-base: 1.5rem;
+        --text-lg: 2rem;
+        --text-xl: 4.5rem;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, 368px));
+        border-radius: 32px;
+    }
+
+    .result {
+        border-radius: 32px;
+        padding: 38px 54px 55px;
+        gap: 35px;
+
+        .percent {
+            height: 200px;
+            width: 200px;
+        }
+
+        > div {
+            h3 {
+                margin-bottom: 14px;
+            }
+        }
+    }
+
+    .summary {
+        padding: 38px 40px 46px;
+
+        ul {
+            margin-block: 28px 41px;
+        }
+
+        button {
+            font-size: var(--text-sm);
+            cursor: pointer;
+            transition: ease 0.5s;
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 128px;
+                background: linear-gradient(hsla(var(--slate-blue)), hsla(var(--royal-blue)));
+                opacity: 0;
+                z-index: -1;
+                transition: opacity ease 0.5s;
+            }
+        }
+
+    }
+}
+
+@media (hover: hover) {
+    .summary {
+        button {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
