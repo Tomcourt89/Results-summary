@@ -119,6 +119,11 @@ h3 {
                 font-weight: 500;
                 display: flex;
                 align-items: center;
+
+                &::before {
+                    transform: translateY(2px);
+                    margin-right: 12px;
+                }
             }
 
             p {
@@ -136,13 +141,8 @@ h3 {
 
             h4 {
                 color: hsl(var(--light-red));
-
-                &::before {
-                    content: url(../assets/images/icon-reaction.svg);
-                    transform: translateY(2px);
-                    margin-right: 12px;
-                }
             }
+            
         }
     
         .memory {
@@ -150,12 +150,6 @@ h3 {
 
             h4 {
                 color: hsl(var(--orange-yellow));
-
-                &::before {
-                    content: url(../assets/images/icon-memory.svg);
-                    transform: translateY(2px);
-                    margin-right: 12px;
-                }
             }
         }
     
@@ -165,11 +159,6 @@ h3 {
             h4 {
                 color: hsl(var(--green-teal));
 
-                &::before {
-                    content: url(../assets/images/icon-verbal.svg);
-                    transform: translateY(2px);
-                    margin-right: 12px;
-                }
             }
         }
     
@@ -178,12 +167,6 @@ h3 {
 
             h4 {
                 color: hsl(var(--cobalt-blue));
-
-                &::before {
-                    content: url(../assets/images/icon-visual.svg);
-                    transform: translateY(2px);
-                    margin-right: 12px;
-                }
             }
         }
     }
